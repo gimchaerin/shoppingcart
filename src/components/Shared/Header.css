@@ -1,0 +1,64 @@
+/* Header 스타일 */
+.header {
+  background-color: var(--header-bg, #4caf50);
+  padding: 10px 0;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+body.light .header {
+  background-color: #4caf50; /* 라이트 모드에서도 유지 */
+}
+
+body.dark .header {
+  background-color: #222222; /* 다크 모드 배경 */
+}
+
+
+.nav {
+  display: flex;
+  justify-content: center;
+}
+
+.nav-list {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+  padding: 0;
+  margin: 0;
+}
+
+/* 네비게이터 링크 스타일 */
+.nav-link {
+  text-decoration: none;
+  color: white; /* 기본 흰색 */
+  font-size: 18px;
+  font-weight: bold;
+  transition: color 0.3s;
+}
+
+body.light .nav-link {
+  color: white; /* 라이트 모드에서 흰색 유지 */
+}
+
+body.dark .nav-link {
+  color: white; /* 다크 모드에서도 흰색 */
+}
+
+.nav-link:hover {
+  color: #a8dca8;
+}
+
+.theme-toggle-button {
+  background-color: #ffffff;
+  border: none;
+  border-radius: 2px;
+  padding: 2px 2px;
+  cursor: pointer;
+  font-size: 5px;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+body.dark .theme-toggle-button {
+  background-color: #333333;
+  color: #ffffff;
+}

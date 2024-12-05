@@ -1,0 +1,245 @@
+/* 전체 페이지 스타일 */
+.cart-page {
+  padding: 20px;
+  font-family: Arial, sans-serif;
+  background-color: var(--page-bg, #f9f9f9);
+  color: var(--text-color, #333);
+  min-height: 100vh;
+  position: relative; /* 하단 고정 버튼을 위한 설정 */
+  transition: background-color 0.3s, color 0.3s;
+}
+
+body.dark .cart-page {
+  background-color: #121212;
+  color: #ffffff;
+}
+
+/* 제목 중앙 정렬 */
+.cart-page h1 {
+  font-size: 2rem;
+  color: var(--text-color, #333);
+  margin-bottom: 20px;
+  text-align: center; /* 중앙 정렬 */
+  transition: color 0.3s;
+}
+
+body.dark .cart-page h1 {
+  color: #ffffff;
+}
+
+/* 빈 카트 메시지 */
+.empty-cart {
+  font-size: 1.2rem;
+  color: var(--empty-cart-color, #888);
+  text-align: center; /* 중앙 정렬 */
+}
+
+body.dark .empty-cart {
+  color: #bbbbbb;
+}
+
+/* 카트 목록 */
+.cart-list {
+  list-style: none;
+  padding: 0;
+  margin: 0 auto;
+  max-width: 800px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+/* 각 카트 항목 */
+.cart-item {
+  background-color: var(--card-bg, #ffffff);
+  border: 1px solid var(--card-border, #ddd);
+  border-radius: 8px;
+  padding: 20px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: background-color 0.3s, border-color 0.3s;
+}
+
+body.dark .cart-item {
+  background-color: #333333;
+  border-color: #555555;
+}
+
+/* 상품 정보 */
+.cart-item-details {
+  flex: 1;
+  text-align: left;
+  margin-left: 16px;
+}
+
+.cart-item-name {
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: var(--text-color, #333);
+}
+
+body.dark .cart-item-name {
+  color: #ffffff;
+}
+
+.cart-item-price {
+  font-size: 1rem;
+  color: var(--price-color, #555);
+}
+
+body.dark .cart-item-price {
+  color: #cccccc;
+}
+
+.cart-item-description {
+  font-size: 0.9rem;
+  color: var(--description-color, #777);
+}
+
+body.dark .cart-item-description {
+  color: #bbbbbb;
+}
+
+/* 이미지 */
+.cart-item-image {
+  width: 80px;
+  height: 80px;
+  object-fit: contain;
+  margin-right: 20px;
+}
+
+/* 버튼 그룹 */
+.cart-item-quantity {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.quantity-button {
+  background-color: var(--button-bg, #f0f0f0);
+  border: 1px solid #ccc;
+  padding: 5px 10px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.quantity-button:hover {
+  background-color: #e0e0e0;
+}
+
+body.dark .quantity-button {
+  background-color: #555555;
+  color: #ffffff;
+  border-color: #777777;
+}
+
+/* 제거 버튼 */
+.cart-item-remove-button {
+  background-color: var(--button-bg, #ff6b6b);
+  color: white;
+  border: none;
+  border-radius: 5px;
+  padding: 10px 15px;
+  font-size: 0.9rem;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.cart-item-remove-button:hover {
+  background-color: #ff4c4c;
+}
+
+body.dark .cart-item-remove-button {
+  background-color: #cc3333;
+}
+
+/* 총 가격 */
+.cart-total {
+  margin-top: 20px;
+  padding: 20px;
+  border-top: 1px solid var(--card-border, #ddd);
+  text-align: right;
+}
+
+body.dark .cart-total {
+  border-color: #555555;
+}
+
+.cart-total h2 {
+  font-size: 1.5rem;
+  color: var(--text-color, #333);
+}
+
+body.dark .cart-total h2 {
+  color: #ffffff;
+}
+
+/* 결제하기 버튼 - 하단 고정 */
+.checkout-button {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%; /* 화면 전체 너비 */
+  background-color: var(--button-bg, #4caf50);
+  color: white;
+  padding: 10px;
+  border: none;
+  border-radius: 0; /* 둥근 모서리 제거 */
+  font-size: 1.2rem;
+  cursor: pointer;
+  text-align: center;
+  transition: background-color 0.3s;
+}
+
+.checkout-button:hover {
+  background-color: #45a049;
+}
+
+body.dark .checkout-button {
+  background-color: #555555;
+}
+
+body.dark .checkout-button:hover {
+  background-color: #666666;
+}
+
+/* 삭제 확인 모달 */
+.modal {
+  background-color: var(--card-bg, #ffffff);
+  color: var(--text-color, #333);
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  transition: background-color 0.3s, color 0.3s;
+}
+
+body.dark .modal {
+  background-color: #333333;
+  color: #ffffff;
+}
+
+/* 모달 버튼 */
+.modal button {
+  background-color: var(--button-bg, #4caf50);
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+body.dark .modal button {
+  background-color: #555555;
+}
+
+.modal button:hover {
+  background-color: #45a049;
+}
+
+body.dark .modal button:hover {
+  background-color: #666666;
+}
